@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import Snackbar from 'material-ui/Snackbar';
 
@@ -10,9 +11,12 @@ export default function snackbar(Component, events) {
         open: false,
       };
       const onEvent = (ev) => {
-        return () => this.setState({
+        const fn = events[ev];
+        return (...args) => this.setState({
           open: true,
-          message: events[ev],
+          message: _.isFunction(fn) ?
+            fn.apply(null, args) :
+            fn,
         });
       }
       this.events = Object.keys(events)

@@ -44,7 +44,9 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "color-ops": "^2.0.0",
     "material-ui": "^0.15.4",
+    "parse-color": "^1.0.0",
     "qs": "^6.2.1",
     "raw-loader": "^0.5.1",
     "react": "^15.2.1",
