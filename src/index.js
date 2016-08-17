@@ -1,10 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
-import 'reveal.js/css/reveal.css';
-import 'reveal.js/css/theme/black.css';
-import 'highlight.js/styles/github.css';
+const injectTapEventPlugin = require('react-tap-event-plugin');
+
+injectTapEventPlugin();
+
+const React = require('react');
+const ReactDOM = require('react-dom');
+const App = require('./App').default;
+require('./index.css');
+require('reveal.js/css/reveal.css');
+require('reveal.js/css/theme/black.css');
+require('highlight.js/styles/github.css');
 
 ReactDOM.render(
   <App />,

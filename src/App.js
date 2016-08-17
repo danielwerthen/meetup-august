@@ -3,6 +3,7 @@ import './App.css';
 import reveal from 'reveal.js';
 import ButtonSlide from './sections/button-slide';
 import ButtonDesign from './sections/button-design';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
   componentDidMount() {
@@ -10,12 +11,25 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="reveal">
-          <div className="slides">
-              <ButtonSlide />
-              <ButtonDesign />
-          </div>
-      </div>
+      <MuiThemeProvider>
+        <div className="reveal">
+            <div className="slides">
+                <ButtonSlide
+                  header="On hover"
+                  path="./on-hover-button"
+                />
+                <ButtonSlide
+                  header="A styled button"
+                  path="./styled-button"
+                />
+                <ButtonSlide
+                  header="A wrapped button"
+                  path="./wrapped-button"
+                />
+                <ButtonDesign />
+            </div>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
