@@ -88,6 +88,14 @@ class App extends Component {
                 <h3>Is the correct the solution?</h3>
                 <p>I don't know...</p>
               </section>
+              <section>
+                <h3>Something as simple as a button</h3>
+                <p>is far from easy</p>
+              </section>
+              <section>
+                <h3>We are hiring ;-)</h3>
+                <p>daniel.werthen@universalavenue.com</p>
+              </section>
             </div>
         </div>
       </MuiThemeProvider>
